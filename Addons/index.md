@@ -5,7 +5,7 @@ author:
 category: addons
 ---
 
-![](static/images/banner.png)
+![](../static/images/banner.png)
 ![](https://img.shields.io/discord/647922123192533022?color=212121&label=Discord&logo=discord&logoColor=212121&style=for-the-badge)
 
 # Addons
@@ -74,7 +74,7 @@ public class Core implements Addon {
 }
 ```
 
-Unlike spigot, a file called addon.json must be created like following:
+Unlike spigot, a file called `addon.json` must be created like following:
 
 ```json
 {
