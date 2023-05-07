@@ -1,0 +1,16 @@
+input: .
+output: build
+url: # Add your website address here
+branding:
+  logo: static/images/cardinal.png
+  title: Cardinal Anticheat
+  label: Docs
+links:
+- text: GitHub
+  link: https://github.com/cardinalanticheat
+- text: Discord
+  link: https://discord.gg/fxTn7v8
+- text: Javadoc
+  link: https://cardinalanticheat.github.io/addon-api/docs/
+footer:
+  copyright: "&copy; micartey {{ year }}. All rights reserved."
