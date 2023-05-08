@@ -2,7 +2,9 @@
 author:
   name: micartey
   logo: https://github.com/micartey.png
-category: [addons, events]
+tags: 
+    - addons
+    - events
 ---
 
 ![](../static/images/banner.png)

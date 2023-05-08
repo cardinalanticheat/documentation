@@ -1,12 +1,14 @@
 ---
+icon: book
+expanded: true
 author:
   name: micartey
   logo: https://github.com/micartey.png
-category: addons
+tags: 
+  - addons
 ---
 
 ![](../static/images/banner.png)
-![](https://img.shields.io/discord/647922123192533022?color=212121&label=Discord&logo=discord&logoColor=212121&style=for-the-badge)
 
 # Addons
 

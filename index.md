@@ -1,4 +1,5 @@
 ---
+icon: rocket
 author:
   name: micartey
   logo: https://github.com/micartey.png
