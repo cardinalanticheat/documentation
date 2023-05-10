@@ -30,7 +30,7 @@ tags: config
     </a>
 </div>
 
-# Compability
+# Compatibility
 
 Cardinal supports all versions between 1.8 and 1.19.
 

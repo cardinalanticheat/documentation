@@ -9,8 +9,10 @@ tags:
 | Features          | :icon-verified: Pro | 
 | ----------------- | ------------------- | 
 | Free Upgrades     | Unlimited           | 
-| Devices / Servers | 3                   | 
 | Pricing           | 19.99€              | 
+
+
+<!-- | Devices / Servers | 3                   |  -->
 
 Not found what your was searching for? Please contact me for invidial plans.
 
