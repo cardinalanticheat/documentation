@@ -1,10 +1,9 @@
 input: .
 output: build
-url: # Add your website address here
+url: https://cardinalanticheat.github.io/documentation/
 branding:
   logo: static/images/cardinal.png
   title: Cardinal Anticheat
-  label: Docs
 links:
 - text: GitHub
   link: https://github.com/cardinalanticheat

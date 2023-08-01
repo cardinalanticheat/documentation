@@ -1,4 +1,5 @@
 ---
+icon: database
 author:
   name: micartey
   logo: https://github.com/micartey.png
@@ -6,7 +7,7 @@ tags:
     - addons
 ---
 
-![](../static/images/banner.png)
+![](../static/images/banner.png){ style="width: 70%; display: block; margin-left: auto; margin-right: auto" }
 
 <div align="center" style="margin-bottom: 2rem">
     <img

@@ -2,22 +2,44 @@
 icon: verified
 tags:
   - pricing
+order: -2
 ---
+
+![](static/images/banner.png){ style="width: 70%; display: block; margin-left: auto; margin-right: auto" }
+
+<div align="center" style="margin-bottom: 2rem">
+    <img
+        src="https://img.shields.io/badge/Written%20in-java-%23EF4041?style=for-the-badge"
+        height="30"
+        style="margin-left: 3px"
+    />
+    <a href="https://discord.gg/fxTn7v8">
+        <img 
+            src="https://img.shields.io/discord/647922123192533022?color=212121&label=Discord&logo=discord&logoColor=212121&style=for-the-badge"
+            height="30"
+            style="margin-left: 3px"
+        />
+    </a>
+    <a href="https://cardinalanticheat.github.io/addon-api/docs/" target="_blank">
+        <img
+            src="https://img.shields.io/badge/javadoc-reference-5272B4.svg?style=for-the-badge"
+            height="30"
+            style="margin-left: 3px"
+        />
+    </a>
+</div>
 
 # Pricing
 
-| Features          | :icon-verified: Pro | 
-| ----------------- | ------------------- | 
-| Free Upgrades     | Unlimited           | 
-| Pricing           | 19.99€              | 
+| Features          | :icon-dependabot: Community | :icon-verified: Pro |
+| ----------------- | --------------------------- | ------------------- |
+| Players           | 10                          | Unlimited           |
+| Addons            | :icon-x:                    | :icon-check:        |
+| Banning           | :icon-x:                    | :icon-check:        |
+| Devices / Servers | 1                           | 3                   |
+| Support           | Limited                     | Priority            |
+| Pricing           | Free                        | 19.99€              |
 
-
-<!-- | Devices / Servers | 3                   |  -->
-
+!!!
 Not found what your was searching for? Please contact me for invidial plans.
-
-## Q&A
-
-### Can I get a trial period?
-
-Absolutely, please contact me by using the `Contact` link at the top and write me an email.
+!!!

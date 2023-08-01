@@ -1,14 +1,8 @@
 ---
-icon: book
-expanded: true
-author:
-  name: micartey
-  logo: https://github.com/micartey.png
+icon: workflow
 tags: 
   - addons
 ---
-
-![](../static/images/banner.png)
 
 <div align="center" style="margin-bottom: 2rem">
     <img
