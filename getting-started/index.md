@@ -67,6 +67,23 @@ $ java --add-opens=java.base/java.lang=ALL-UNNAMED -jar <file>
 
 It is overall questionable why Java 9+ introduced this module system in the first place as it breaks a lot of exisiting code.
 
+
+### Configure Netty for Cardinal
+
+Cardinal still has (as of the 4.x release) some performance issues while handling the packets. 
+These issues have no impact on the servers tps.
+Some packets (e.g. movement packets) trigger an environment update to be able to accuratly evaluate the players actions.
+These updates may take a few millisecounds (~2-5ms). While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance.
+
+To fix this, simply edit the `Spigot.yml` and change the `netty-threads` to 3 times the expected amount players.
+This will assure a smooth gaming experience and fix any lags you would've faced.
+
+### Send to many Packets
+
+Cardinal sends a lot of packets to keep track of entity positions on the client side and other actions.
+Some Spigots and ViaVersion kicks the player when they send a certain amount of packets per tick resulting in a kick.
+You can either increase the amount of packets or disable the tracking as Cardinal takes care of *packet spamming*
+
 ### Allow tcpdump
 
 Cardinal uses the `tcpdump` command to capture network packets at hardware layer.
