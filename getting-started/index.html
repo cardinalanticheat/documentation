@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745536044495">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745593044755">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/documentation/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.1.0.745536044495" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.745593044755" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.745536044495" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.745593044755" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.745536044495" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.745536044495" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.745593044755" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.745593044755" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -342,26 +342,26 @@ Because JCloak uses reflection and Java 9+ introduced a new module system the fo
 <pre class="language-bash"><code v-pre class="language-bash">$ java --add-opens=java.base/java.lang=ALL-UNNAMED -jar &lt;file&gt;</code></pre>
 </doc-codeblock></div>
 <p>It is overall questionable why Java 9+ introduced this module system in the first place as it breaks a lot of exisiting code.</p>
-<doc-anchor-target id="configure-netty-for-cardinal">
+<doc-anchor-target id="configure-netty">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-netty-for-cardinal">#</doc-anchor-trigger>
-        <span>Configure Netty for Cardinal</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-netty">#</doc-anchor-trigger>
+        <span>Configure Netty</span>
     </h3>
 </doc-anchor-target>
-<p>Cardinal still has (as of the 4.x release) some performance issues while handling the packets.
-These issues have no impact on the servers tps.
+<p>Cardinal takes (as of the 4.x release) some time to handle the packets.
+This has no impact on the servers tps.
 Some packets (e.g. movement packets) trigger an environment update to be able to accuratly evaluate the players actions.
-These updates may take a few millisecounds (~2-5ms). While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance.</p>
-<p>To fix this, simply edit the <code v-pre>Spigot.yml</code> and change the <code v-pre>netty-threads</code> to 3 times the expected amount players.
-This will assure a smooth gaming experience and fix any lags you would&#x27;ve faced.</p>
-<doc-anchor-target id="send-to-many-packets">
+These updates may take a few millisecounds. While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance.</p>
+<p>To fix this, simply edit the <code v-pre>Spigot.yml</code> and change the <strong>netty-threads</strong> to 3 times the expected amount players.
+This will assure a smooth gaming experience and fix any network delays you would&#x27;ve faced.</p>
+<doc-anchor-target id="sending-to-many-packets">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#send-to-many-packets">#</doc-anchor-trigger>
-        <span>Send to many Packets</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sending-to-many-packets">#</doc-anchor-trigger>
+        <span>Sending to many Packets</span>
     </h3>
 </doc-anchor-target>
 <p>Cardinal sends a lot of packets to keep track of entity positions on the client side and other actions.
-Some Spigots and ViaVersion kicks the player when they send a certain amount of packets per tick resulting in a kick.
+Some Spigot forks and plugins like ViaVersion kick the player when they send a certain amount of packets per tick resulting in a kick.
 You can either increase the amount of packets or disable the tracking as Cardinal takes care of <em>packet spamming</em></p>
 <doc-anchor-target id="allow-tcpdump">
     <h3>
