@@ -68,14 +68,14 @@ $ java --add-opens=java.base/java.lang=ALL-UNNAMED -jar <file>
 It is overall questionable why Java 9+ introduced this module system in the first place as it breaks a lot of exisiting code.
 
 
-### Configure Netty
+### Configure netty threads
 
 Cardinal takes (as of the 4.x release) some time to handle the packets. 
-This has no impact on the servers tps.
+This has no impact on the servers tps or gameplay.
 Some packets (e.g. movement packets) trigger an environment update to be able to accuratly evaluate the players actions.
-These updates may take a few millisecounds. While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance.
+These updates may take a few millisecounds. While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance and creating the impression that the server is crashing.
 
-To fix this, simply edit the `Spigot.yml` and change the **netty-threads** to 3 times the expected amount players.
+To fix this, simply edit the `Spigot.yml` and change the **netty-threads** to 2 or 3 times the expected amount players.
 This will assure a smooth gaming experience and fix any network delays you would've faced.
 
 ### Sending to many Packets
@@ -83,6 +83,17 @@ This will assure a smooth gaming experience and fix any network delays you would
 Cardinal sends a lot of packets to keep track of entity positions on the client side and other actions.
 Some Spigot forks and plugins like ViaVersion kick the player when they send a certain amount of packets per tick resulting in a kick.
 You can either increase the amount of packets or disable the tracking as Cardinal takes care of *packet spamming*
+
+### Everything is borken
+
+If you have the feeling that everyting is broken and you are getting flagged without reason, there might be a plugin that prevents Cardinal from correctly processing packets.
+
+To figure out which plugins is interfering, remove all plugins except Cardinal and add them one by one when until you find out which plugins is the cultprint. 
+It is very likely, that the developer of that plugin is not following any convetions. 
+In that case, create an issue and wait until that issue is fixed. 
+
+If you are unsure - create an issue [here](https://github.com/micartey/Cardinal-Anticheat/issues) and I'll create an issue and link it when it truly is not caused by Cardinal.
+Should the project be discontinued or the release depricated, consider upgrading or using a different plugin instead.
 
 ### Allow tcpdump
 
