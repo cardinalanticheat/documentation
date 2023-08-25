@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746226514127">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746292961470">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/documentation/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.2.0.746226514127" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.2.0.746292961470" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.2.0.746226514127" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.2.0.746292961470" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.2.0.746226514127" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.2.0.746226514127" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.2.0.746292961470" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.2.0.746292961470" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -357,28 +357,8 @@ This has no impact on the servers tps or gameplay.
 Some packets (e.g. movement packets) trigger an environment update to be able to accuratly evaluate the players actions.
 These updates may take a few millisecounds. While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance and creating the impression that the server is crashing.</p>
 <p>To fix this, simply edit the <code v-pre>Spigot.yml</code> and change the <strong>netty-threads</strong> to 2 or 3 times the expected amount players.
-This will assure a smooth gaming experience and fix any network delays you would&#x27;ve faced.</p>
-<doc-anchor-target id="sending-to-many-packets">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sending-to-many-packets">#</doc-anchor-trigger>
-        <span>Sending to many Packets</span>
-    </h3>
-</doc-anchor-target>
-<p>Cardinal sends a lot of packets to keep track of entity positions on the client side and other actions.
-Some Spigot forks and plugins like ViaVersion kick the player when they send a certain amount of packets per tick resulting in a kick.
-You can either increase the amount of packets or disable the tracking as Cardinal takes care of <em>packet spamming</em></p>
-<doc-anchor-target id="everything-is-borken">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#everything-is-borken">#</doc-anchor-trigger>
-        <span>Everything is borken</span>
-    </h3>
-</doc-anchor-target>
-<p>If you have the feeling that everyting is broken and you are getting flagged without reason, there might be a plugin that prevents Cardinal from correctly processing packets.</p>
-<p>To figure out which plugins is interfering, remove all plugins except Cardinal and add them one by one when until you find out which plugins is the cultprint.
-It is very likely, that the developer of that plugin is not following any convetions.
-In that case, create an issue and wait until that issue is fixed.</p>
-<p>If you are unsure - create an issue <a href="https://github.com/micartey/Cardinal-Anticheat/issues">here</a> and I&#x27;ll create an issue and link it when it truly is not caused by Cardinal.
-Should the project be discontinued or the release depricated, consider upgrading or using a different plugin instead.</p>
+This will assure a smooth gaming experience and fix any network delays you would&#x27;ve faced and should be done regardless of the anticheat you are using.
+The effect on cpu usage is neglectable.</p>
 <doc-anchor-target id="allow-tcpdump">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#allow-tcpdump">#</doc-anchor-trigger>
@@ -416,10 +396,10 @@ To allow its use, you have execute the following command on your linux server:</
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../getting-started/commands/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../addons/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Commands</span>
+                                                <span class="block mt-1">Addons</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
