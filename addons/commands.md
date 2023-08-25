@@ -49,8 +49,8 @@ public interface Command {
 You can register commands just like [events](Events.md) with `Extension.registerCommand`
 
 ```java
-import me.clientastisch.extension.Extension;
-import me.clientastisch.extension.impl.Addon;
+import me.clientastisch.cardinal.extension.Extension;
+import me.clientastisch.cardinal.extension.impl.Addon;
 
 public class Core implements Addon {
 

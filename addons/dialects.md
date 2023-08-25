@@ -48,8 +48,8 @@ You simply have to create a class and implement [PunishDialect](https://cardinal
 Registering a dialect is similar to any other event or command you're trying to register. Therefore you need to get the static reference of Extension and call the method registerDialect with the required arguments.
 
 ```java
-import me.clientastisch.extension.Extension;
-import me.clientastisch.extension.impl.Addon;
+import me.clientastisch.cardinal.extension.Extension;
+import me.clientastisch.cardinal.extension.impl.Addon;
 
 public class Core implements Addon {
 

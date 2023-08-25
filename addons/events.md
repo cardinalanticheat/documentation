@@ -40,21 +40,20 @@ That's because Cardinal-Anticheat has an entirely different event-system.
 It's possible to use bukkit events and cardinal events in the same class by implementing both classes.
 
 ```java
-import me.clientastisch.extension.impl.event.EventListener;
+import me.clientastisch.cardinal.extension.impl.event.EventListener;
 
 public class MyWonderfulEvent implements EventListener {
 
 }
 ```
 
-The next difference is that Cardinal-Anticheat uses the annotation `@EventManager.Target` above methods. 
-The annotation also ships with its own modifiers resulting in events being called asynchronous.
-This behavior can be changed by setting the `isSync` property to true.
+The next difference is that Cardinal-Anticheat uses the annotation `@EventManager.Target` above methods.
+To make the events asynchron, you can set the `isAsync` parameter to `true` (default is `false`).
 
 ```java
-import me.clientastisch.events.EventManager
+import me.clientastisch.cardinal.events.EventManager
 
-@EventManager.Target(isSync = true)
+@EventManager.Target
 public void onFlag(CheckFireEvent event) {
     event.cancelled();
 }
@@ -68,8 +67,8 @@ For a complete overview of all events, visit the [javadoc](https://cardinalantic
 You can register events by calling `Extension.registerListener`
 
 ```java
-import me.clientastisch.extension.Extension;
-import me.clientastisch.extension.impl.Addon;
+import me.clientastisch.cardinal.extension.Extension;
+import me.clientastisch.cardinal.extension.impl.Addon;
 
 public class Core implements Addon {
 

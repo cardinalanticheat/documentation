@@ -75,8 +75,8 @@ dependencies {
 After adding the addon api as a dependency, start by implementing [Addon](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/Addon.html).
 
 ```java
-import me.clientastisch.extension.Extension;
-import me.clientastisch.extension.impl.Addon;
+import me.clientastisch.cardinal.extension.Extension;
+import me.clientastisch.cardinal.extension.impl.Addon;
 
 public class Core implements Addon {
 
