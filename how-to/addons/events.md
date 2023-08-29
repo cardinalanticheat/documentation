@@ -2,7 +2,7 @@
 icon: package-dependents
 author:
   name: micartey
-  logo: https://github.com/micartey.png
+  avatar: https://github.com/micartey.png
 tags: 
     - addons
     - events

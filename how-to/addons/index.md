@@ -2,6 +2,9 @@
 icon: workflow
 tags: 
   - addons
+author:
+  name: micartey
+  avatar: https://github.com/micartey.png
 ---
 
 <div align="center" style="margin-bottom: 2rem">
