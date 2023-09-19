@@ -51,8 +51,6 @@ You can purchase a copy on [builtbybit](https://builtbybit.com/resources/cardina
 Afterwards join my discord and notify **micartey** to receive your license key and being able to use all the features Cardinal provides.
 Until you receive your license key you can use the community edition to be able to configure Cardinal to your liking.
 
-### Active a license key
-
 To active the license key you have to edit the `Config.yml` and change the last line to include your license key.
 Restart the server and you are ready to go.
 
@@ -67,6 +65,26 @@ $ java --add-opens=java.base/java.lang=ALL-UNNAMED -jar <file>
 
 It is overall questionable why Java 9+ introduced this module system in the first place as it breaks a lot of exisiting code.
 
+### Fixed version
+
+Cardinal consists of a loader that always uses the latest release so that you don't have to download newer versions. 
+While each release is always testet and walks through several stages you might want to wait to verify that a new version is compatible and stable.
+To stay on a fixed version, you only have to set an environment variable before starting the server:
+
+```shell
+export CARDINAL_HASH=<hash>
+```
+
+The current hash can be shown by executing the `cac` command and save the last 8 characters.
+
+### Unstable versions
+
+While stable versions are more beneficial, you might want to test out newer features, detections or fixes before it has been tested and published.
+You can do this by setting another environment variable:
+
+```shell
+export CARDINAL_BRANCH=nightly # nightly, alpha, beta, stable (default)
+```
 
 ### Configure netty threads
 
