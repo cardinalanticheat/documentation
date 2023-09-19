@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746646667080">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748470722700">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.2.0">
+    <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
     <title>Getting Started</title>
@@ -31,14 +31,14 @@
     <meta property="twitter:description" content="Cardinal requires Java 8 or above to run. You can download the latest version of Java here. For Java 9 and above take a look at the ">
     <meta property="twitter:image" content="https://cardinalanticheat.github.io/documentation/static/images/banner.png">
 
-    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/documentation/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.2.0.746646667080" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.748470722700" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.2.0.746646667080" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.2.0.746646667080" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.2.0.746646667080" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.748470722700" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.748470722700" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.748470722700" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -244,7 +244,6 @@
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
-                
                                 <!-- Page content  -->
 <p><figure class="content-center">
     <img src="../static/images/banner.png" alt="" style="width: 70%; display: block; margin-left: auto; margin-right: auto">
@@ -326,12 +325,6 @@ Really active community members can receive a free license key for the pro editi
 <p>You can purchase a copy on <a href="https://builtbybit.com/resources/cardinal-anticheat-cac.26622/">builtbybit</a> (also known as McMarket) or discord.
 Afterwards join my discord and notify <strong>micartey</strong> to receive your license key and being able to use all the features Cardinal provides.
 Until you receive your license key you can use the community edition to be able to configure Cardinal to your liking.</p>
-<doc-anchor-target id="active-a-license-key">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#active-a-license-key">#</doc-anchor-trigger>
-        <span>Active a license key</span>
-    </h3>
-</doc-anchor-target>
 <p>To active the license key you have to edit the <code v-pre>Config.yml</code> and change the last line to include your license key.
 Restart the server and you are ready to go.</p>
 <doc-anchor-target id="run-on-java-9-module-system">
@@ -346,6 +339,30 @@ Because JCloak uses reflection and Java 9+ introduced a new module system the fo
 <pre class="language-bash"><code v-pre class="language-bash">$ java --add-opens=java.base/java.lang=ALL-UNNAMED -jar &lt;file&gt;</code></pre>
 </doc-codeblock></div>
 <p>It is overall questionable why Java 9+ introduced this module system in the first place as it breaks a lot of exisiting code.</p>
+<doc-anchor-target id="fixed-version">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixed-version">#</doc-anchor-trigger>
+        <span>Fixed version</span>
+    </h3>
+</doc-anchor-target>
+<p>Cardinal consists of a loader that always uses the latest release so that you don&#x27;t have to download newer versions.
+While each release is always testet and walks through several stages you might want to wait to verify that a new version is compatible and stable.
+To stay on a fixed version, you only have to set an environment variable before starting the server:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">export CARDINAL_HASH=&lt;hash&gt;</code></pre>
+</doc-codeblock></div>
+<p>The current hash can be shown by executing the <code v-pre>cac</code> command and save the last 8 characters.</p>
+<doc-anchor-target id="unstable-versions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unstable-versions">#</doc-anchor-trigger>
+        <span>Unstable versions</span>
+    </h3>
+</doc-anchor-target>
+<p>While stable versions are more beneficial, you might want to test out newer features, detections or fixes before it has been tested and published.
+You can do this by setting another environment variable:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">export CARDINAL_BRANCH=nightly # nightly, alpha, beta, stable (default)</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="configure-netty-threads">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configure-netty-threads">#</doc-anchor-trigger>
@@ -443,6 +460,6 @@ To allow its use, you have execute the following command on your linux server:</
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Getting Started", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Getting Started", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
