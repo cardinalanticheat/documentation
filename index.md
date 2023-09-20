@@ -40,7 +40,7 @@ This offers a great advantage in keeping your server safe from hackers while kno
 
 ## Testserver
 
-If you are interested but don't want to buy a license right away try, you are welcome to join the official public testserver
+If you are interested but don't want to buy a license right away, you are welcome to join the official public testserver
 
 ```
 cardinal.micartey.dev

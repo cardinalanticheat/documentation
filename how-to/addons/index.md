@@ -31,7 +31,7 @@ author:
 
 # Addons
 
-To get a Git project into your build:
+To get started, you need to add the extension api to your build file:
 
 1. Add the JitPack repository to your build file
 2. Add the dependency
