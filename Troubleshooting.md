@@ -2,7 +2,7 @@
 icon: question
 ---
 
-# Troubleshoting
+# Troubleshooting
 
 Please always first check the console for exceptions and errors.
 Many exceptions are self-explanatory and can be fixed by reading the error message or after a quick google.
