@@ -44,5 +44,5 @@ It is also possible to jump to a specific topic specified in the table of conten
 | Guide                            | Description                                                                                                                                           |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Setup](./addons)                | Getting started with the cardinal developer api and create addons that further enhance and customize the experience on your server                    |
-| [Events](./addons/events.md)     | Events are one of the more interesting and usefull things the addons provide. They also make it possible to create version proof packet-based plugins |
+| [Events](./addons/events.md)     | Events are one of the more interesting and useful things the addons provide. They also make it possible to create version proof packet-based plugins |
 | [Database](./addons/dialects.md) | Create a database connection to store player data                                                                                                     |

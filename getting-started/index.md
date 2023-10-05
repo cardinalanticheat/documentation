@@ -34,11 +34,11 @@ order: 1
 
 Cardinal requires Java 8 or above to run. You can download the latest version of Java [here](https://adoptopenjdk.net/).
 For Java 9 and above take a look at the [Run on Java 9+ Module System](#run-on-java-9-module-system) section.
-If you want to use more advanced features that surpase the capabilities of spigot, you can take a look at the [tcpdump section](#allow-tcpdump).
+If you want to use more advanced features that surpass the capabilities of spigot, you can take a look at the [tcpdump section](#allow-tcpdump).
 
 ## Choose an Edition
 
-There are currently two editions available. They are different in features and pricing. Please checkout the [pricing](/pricing) page to checkout all the available information on the different editions.
+There are currently two editions available. They are different in features and pricing. Please check out the [pricing](/pricing) page to check out all the available information on the different editions.
 
 ### Download Community Edition
 
@@ -57,7 +57,7 @@ Until you receive your license key you can use the community edition to be able 
 
 [!file Cardinal.jar](https://builtbybit.com/resources/cardinal-anticheat-cac.26622/)
 
-To active the license key you have to edit the `Config.yml` and change the last line to include your license key.
+To activate the license key you have to edit the `Config.yml` and change the last line to include your license key.
 Restart the server and you are ready to go.
 
 ## Configuration
@@ -74,12 +74,12 @@ Because JCloak uses reflection and Java 9+ introduced a new module system the fo
 $ java --add-opens=java.base/java.lang=ALL-UNNAMED -jar <file>
 ```
 
-It is overall questionable why Java 9+ introduced this module system in the first place as it breaks a lot of exisiting code.
+It is overall questionable why Java 9+ introduced this module system in the first place as it breaks a lot of existing code.
 
 ### Stay on a fixed version
 
 Cardinal consists of a loader that always uses the latest release so that you don't have to download newer versions. 
-While each release is always testet and walks through several stages you might want to wait to verify that a new version is compatible and stable.
+While each release is always tested and walks through several stages you might want to wait to verify that a new version is compatible and stable.
 To stay on a fixed version, you only have to set an environment variable before starting the server:
 
 ```shell
@@ -101,8 +101,8 @@ export CARDINAL_BRANCH=nightly # nightly, alpha, beta, stable (default)
 
 Cardinal takes (as of the 4.x release) some time to handle the packets. 
 This has no impact on the servers tps or gameplay.
-Some packets (e.g. movement packets) trigger an environment update to be able to accuratly evaluate the players actions.
-These updates may take a few millisecounds. While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance and creating the impression that the server is crashing.
+Some packets (e.g. movement packets) trigger an environment update to be able to accurately evaluate the players actions.
+These updates may take a few milliseconds. While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance and creating the impression that the server is crashing.
 
 To fix this, simply edit the `Spigot.yml` and change the **netty-threads** to 2 or 3 times the expected amount players.
 This will assure a smooth gaming experience and fix any network delays you would've faced and should be done regardless of the anticheat you are using.
@@ -112,9 +112,9 @@ The effect on cpu usage is neglectable.
 
 Cardinal uses the `tcpdump` command to capture network packets at hardware layer.
 This may or may not create new possibilities for detecting cheaters.
-Currently tcpdump is only being used to detect blink. 
+Currently, tcpdump is only being used to detect blink. 
 This command is not available on non-root users by default.
-To allow its use, you have execute the following command on your linux server:
+To allow its use, you have to execute the following command on your Linux server:
 
 ```shell
 $ sudo setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump

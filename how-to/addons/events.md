@@ -48,7 +48,7 @@ public class MyWonderfulEvent implements EventListener {
 ```
 
 The next difference is that Cardinal-Anticheat uses the annotation `@EventManager.Target` above methods.
-To make the events asynchron, you can set the `isAsync` parameter to `true` (default is `false`).
+To make the events asynchronous, you can set the `isAsync` parameter to `true` (default is `false`).
 
 ```java
 import me.clientastisch.cardinal.events.EventManager
