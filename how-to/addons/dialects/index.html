@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748514802356">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749843728710">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Dialects</title>
     <meta name="title" content="Dialects">
-    <meta name="description" content="As already mentioned, Cardinal Anticheat doesn't handle a database connection. The reason is farily easy to understand.">
+    <meta name="description" content="As already mentioned, Cardinal Anticheat doesn't handle a database connection. The reason is fairly easy to understand.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://cardinalanticheat.github.io/documentation/how-to/addons/dialects/">
@@ -21,22 +21,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cardinalanticheat.github.io/documentation/how-to/addons/dialects/">
     <meta property="og:title" content="Dialects">
-    <meta property="og:description" content="As already mentioned, Cardinal Anticheat doesn't handle a database connection. The reason is farily easy to understand.">
+    <meta property="og:description" content="As already mentioned, Cardinal Anticheat doesn't handle a database connection. The reason is fairly easy to understand.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://cardinalanticheat.github.io/documentation/how-to/addons/dialects/">
     <meta property="twitter:title" content="Dialects">
-    <meta property="twitter:description" content="As already mentioned, Cardinal Anticheat doesn't handle a database connection. The reason is farily easy to understand.">
+    <meta property="twitter:description" content="As already mentioned, Cardinal Anticheat doesn't handle a database connection. The reason is fairly easy to understand.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.748514802356" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.749843728710" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.748514802356" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749843728710" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.748514802356" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.748514802356" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749843728710" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.749843728710" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -288,8 +288,8 @@
 </div>
 
 <p>As already mentioned, Cardinal Anticheat doesn&#x27;t handle a database connection.
-The reason is farily easy to understand. Cardinal Anticheat is a close source plugin whose source is never on the server physically. This has legitimate security and privacy concerns.
-However, Cardinal Anticheat still has a build in ban system and other features, such as storing flags as so called reports.</p>
+The reason is fairly easy to understand. Cardinal Anticheat is a close source plugin whose source is never on the server physically. This has legitimate security and privacy concerns.
+However, Cardinal Anticheat still has a build in ban system and other features, such as storing flags as so-called reports.</p>
 <p>A dialect is used to abstract the database handling by loading the dialect in form of an addon. Creating your own dialect secures the data usage and guarantees the protection of sensitive data, since Cardinal has neither access to the connection nor to any credentials which are typically required. In addition, this gives you the opportunity to migrate to any form of database you desire.</p>
 <doc-anchor-target id="getting-started">
     <h2>
@@ -297,14 +297,14 @@ However, Cardinal Anticheat still has a build in ban system and other features, 
         <span>Getting Started</span>
     </h2>
 </doc-anchor-target>
-<p>You simply have to create a class and implement <a href="https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/dialects/PunishDialect.html">PunishDialect</a> for bans and <a href="https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/dialects/ViolationDialect.html">VialationDialect</a> for reports. Both interfaces will require you to implement some methods but the implementation is up to you. You can use any database or filesystem to write and retrive the informations.</p>
+<p>You simply have to create a class and implement <a href="https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/dialects/PunishDialect.html">PunishDialect</a> for bans and <a href="https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/dialects/ViolationDialect.html">VialationDialect</a> for reports. Both interfaces will require you to implement some methods but the implementation is up to you. You can use any database or file system to write and retrieve the information.</p>
 <doc-anchor-target id="register-a-dialect">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#register-a-dialect">#</doc-anchor-trigger>
         <span>Register a dialect</span>
     </h2>
 </doc-anchor-target>
-<p>Registering a dialect is similar to any other event or command you&#x27;re trying to register. Therefore you need to get the static reference of Extension and call the method registerDialect with the required arguments.</p>
+<p>Registering a dialect is similar to any other event or command you&#x27;re trying to register. Therefore, you need to get the static reference of Extension and call the method registerDialect with the required arguments.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-java"><code v-pre class="language-java">import me.clientastisch.cardinal.extension.Extension;
 import me.clientastisch.cardinal.extension.impl.Addon;
