@@ -43,16 +43,13 @@ There are currently two editions available. They are different in features and p
 ### Download Community Edition
 
 You can download the latest community version of Cardinal [here](https://github.com/micartey/Cardinal-Anticheat/releases).
-Please keep in mind that the community version is limited to 10 players and does not support the use of addons as well as banning players.
-The community version is only meant for testing purposes as well as to be able to give me feedback and report bugs.
-Really active community members can receive a free license key for the pro edition.
+The community edition contains most of the features but is limited in mainly support and the lack of a ban system.
 
 [!file](https://github.com/micartey/Cardinal-Anticheat/releases)
 
 ### Buy Pro Edition
 
 You can purchase a copy on [builtbybit](https://builtbybit.com/resources/cardinal-anticheat-cac.26622/) (also known as McMarket) or discord.
-Afterwards join my discord and notify **micartey** to receive your license key and being able to use all the features Cardinal provides.
 Until you receive your license key you can use the community edition to be able to configure Cardinal to your liking.
 
 [!file Cardinal.jar](https://builtbybit.com/resources/cardinal-anticheat-cac.26622/)
@@ -97,16 +94,15 @@ You can do this by setting another environment variable:
 export CARDINAL_BRANCH=nightly # nightly, alpha, beta, stable (default)
 ```
 
-### Configure netty threads
+### Use caching to recuce startup time
 
-Cardinal takes (as of the 4.x release) some time to handle the packets. 
-This has no impact on the servers tps or gameplay.
-Some packets (e.g. movement packets) trigger an environment update to be able to accurately evaluate the players actions.
-These updates may take a few milliseconds. While this is not a lot, it can sum up when a lot of players are on the same thread resulting in a negative balance and creating the impression that the server is crashing.
+As Cardinal always loads the jar from the cloud, it sometimes can take quite some time to start the server.
+This time can be reduced by enabling caching.
+This will use the Stale-While-Revalidate strategy and load the newest version for the next startup
 
-To fix this, simply edit the `Spigot.yml` and change the **netty-threads** to 2 or 3 times the expected amount players.
-This will assure a smooth gaming experience and fix any network delays you would've faced and should be done regardless of the anticheat you are using.
-The effect on cpu usage is neglectable.
+```shell
+export CARDINAL_CACHE=true
+```
 
 ### Allow tcpdump
 

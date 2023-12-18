@@ -32,14 +32,10 @@ order: -2
 # Pricing
 
 | Features          | :icon-dependabot: Community | :icon-verified: Pro |
-| ----------------- | --------------------------- | ------------------- |
-| Players           | 10                          | Unlimited           |
-| Addons            | :icon-x:                    | :icon-check:        |
+| ----------------- |-----------------------------| ------------------- |
 | Banning           | :icon-x:                    | :icon-check:        |
-| Devices / Servers | 1                           | 3                   |
+| Devices / Servers | N/A                         | 3                   |
 | Support           | Limited                     | Priority            |
 | Pricing           | Free                        | 19.99€              |
 
-!!!
-Not found what your was searching for? Please contact me for invidial plans.
-!!!
+> Cardinal is usable as a free anticheat, but purchasing the full version ensures higher priority support and greatly helps to develop and improve it further.
