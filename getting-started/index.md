@@ -94,16 +94,6 @@ You can do this by setting another environment variable:
 export CARDINAL_BRANCH=nightly # nightly, alpha, beta, stable (default)
 ```
 
-### Use caching to recuce startup time
-
-As Cardinal always loads the jar from the cloud, it sometimes can take quite some time to start the server.
-This time can be reduced by enabling caching.
-This will use the Stale-While-Revalidate strategy and load the newest version for the next startup
-
-```shell
-export CARDINAL_CACHE=true
-```
-
 ### Allow tcpdump
 
 Cardinal uses the `tcpdump` command to capture network packets at hardware layer.
