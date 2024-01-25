@@ -8,7 +8,7 @@ author:
 # Commands
 
 | Command             | Description                                                                                       |
-| ------------------- | ------------------------------------------------------------------------------------------------- |
+|---------------------|---------------------------------------------------------------------------------------------------|
 | *cac flag*          | Shows the flags/alerts                                                                            |
 | *cac config*        | Open in-game GUI to configure Cardinal Anticheat                                                  |
 | *cac ban*           | Bans a player permanently                                                                         |

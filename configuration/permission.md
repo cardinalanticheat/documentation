@@ -1,12 +1,14 @@
 ---
-icon: 
+icon: gear
+author:
+  name: micartey
+  avatar: https://github.com/micartey.png
 ---
 
 # Permissions
 
-
 | Permission                    | Description                                             |
-| ----------------------------- | ------------------------------------------------------- |
+|-------------------------------|---------------------------------------------------------|
 | *cardinal.common.command*     | Allows you to use most of the commands                  |
 | *cardinal.common.tabcomplete* | Allows you to use tab-completeion                       |
 | *cardinal.common.alerts*      | Allows you to toggle alerts                             |

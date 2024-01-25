@@ -14,7 +14,7 @@ icon: rocket
         <img 
             src="https://img.shields.io/discord/647922123192533022?color=212121&label=Discord&logo=discord&logoColor=212121&style=for-the-badge"
             height="30"
-            style="margin-left: 3px"
+            style="margin-left: 3px; background-image: url('static/images/ezgif.com-gif-maker.gif')"
         />
     </a>
     <a href="https://cardinalanticheat.github.io/addon-api/docs/" target="_blank">
@@ -28,9 +28,11 @@ icon: rocket
 
 # Welcome
 
-Cardinal Anticheat is a Minecraft anticheat that uses several novel approches to make players have a hard time hacking on your server. 
-Each check is unique and designed specifically for Cardinal Anticheat always trying to find methods and ways that haven't been tested before.
-This offers a great advantage in keeping your server safe from hackers while known anti-cheats can't do the job.
+> Cardinal Anticheat is a Minecraft anticheat that uses several novel approches to make players have a hard time hacking
+> on your server.
+> Each check is unique and designed specifically for Cardinal Anticheat always trying to find methods and ways that
+> haven't been tested before.
+> This offers a great advantage in keeping your server safe from hackers while known anti-cheats can't do the job.
 
 ![](static/images/ezgif.com-gif-maker.gif){ style="width: 100%; height: 250px" }
 
@@ -43,18 +45,21 @@ cardinal.micartey.dev
 ```
 
 !!!
-In case the server is offline, please join the official discord server and give me a notice that you want to test the anticheat on the testserver.
+In case the server is offline, please join the official discord server and give me a notice that you want to test the
+anticheat on the testserver.
 !!!
-
 
 ## Features
 
-Apart from detecting cheaters, Cardinal Anticheat also offers a lot of other features that may be useful for you as a server owner.
+Apart from detecting cheaters, Cardinal Anticheat also offers a lot of other features that may be useful for you as a
+server owner.
 
-| Feature             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Addons              | Cardinal also allows loading, developing and sharing addons. There are already some addons on my [discord](https://discord.gg/fxTn7v8) server. Furthermore, there is a rather good documentation for developers on how to write your own addons [here](how-to/addons/)                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Report System       | Maybe you don't want a player to be banned right away or lower the chance of banning a legit player. For this reason it makes sense to use Cardinal's report system. Each flag is saved in the database using a [dialect](how-to/addons/dialects/) and based on the number and type of flags, a moderator can decide for himself when a player should be banned. For example, you only ban the 10% of players with the most flags each month etc. Maybe you want to introduce some form of trust factor or scale damage as a result. You might want to let players with similar trust factors play against each other. If you are a developer and want to get to implement such a system, the possibilities are limitless |
-| Custom Ban Manager  | By default Cardinal Anticheat doesn't handle a database connection. The reason is fairly easy to understand. Cardinal Anticheat is a close source plugin whose source is never disclosed. This has legitimate security and privacy concerns                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Built-in ban system | As already stated does Cardinal Anticheat not handle any database connections by default, however using the built-in ban system requires you to use a so-called dialect which you have to write yourself. The documentation for writing a dialect is available [here](how-to/addons/dialects/).                                                                                                                                                                                                           |
+| Feature           | Description                                                                                                                                                                                                                                                                     |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Bedrock Support   | As one of few, Cardinal supports Bedrock fully. Which includes detecting cheats while other anticheats only exempt/whitelist bedrock players                                                                                                                                    
+| Addons            | Cardinal also allows loading, developing and sharing addons. There are already some addons on my [discord](https://discord.gg/fxTn7v8) server. Furthermore, there is a rather good documentation for developers on how to write your own addons [here](how-to/addons/)          
+| Reports           | Each flag will be stored as a so called "report". Players with a lot of reports are very probably cheating. Moderators can vew a sorted list of the players with the most reports and decide to ban those with an unusual high amount of reports                                
+| Dialects          | As closed source projects have legitimate doubts about security and privacy, Cardinal doesn't handle any database connections. Reading and writing is only possible through [dialects](how-to/addons/dialects/) which are a form of addons and provide a high level of security 
+| Always-up to date | Cardinal uses a dynamic loading strategy that provides better support for versioning than other plugins, which also includes the loading of the newest release on startup. This provides better and easier hotfixes to everyone                                                 
+
 
