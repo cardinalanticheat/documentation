@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.758898900762">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759527762283">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -22,23 +22,20 @@
     <meta property="og:url" content="https://cardinalanticheat.github.io/documentation/getting-started/">
     <meta property="og:title" content="Getting Started">
     <meta property="og:description" content="Cardinal requires Java 8 or above to run. You can download the latest version of Java here. For Java 9 and above take a look at the ">
-    <meta property="og:image" content="https://cardinalanticheat.github.io/documentation/static/images/banner.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://cardinalanticheat.github.io/documentation/getting-started/">
     <meta property="twitter:title" content="Getting Started">
     <meta property="twitter:description" content="Cardinal requires Java 8 or above to run. You can download the latest version of Java here. For Java 9 and above take a look at the ">
-    <meta property="twitter:image" content="https://cardinalanticheat.github.io/documentation/static/images/banner.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.758898900762" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.759527762283" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.758898900762" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.759527762283" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.758898900762" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.758898900762" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.759527762283" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -245,32 +242,6 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<p><figure class="content-center">
-    <img src="../static/images/banner.png" alt="" style="width: 70%; display: block; margin-left: auto; margin-right: auto">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<div align="center" style="margin-bottom: 2rem">
-    <img
-        src="https://img.shields.io/badge/Written%20in-java-%23EF4041?style=for-the-badge"
-        height="30"
-        style="margin-left: 3px"
-    />
-    <a href="https://discord.gg/fxTn7v8">
-        <img 
-            src="https://img.shields.io/discord/647922123192533022?color=212121&label=Discord&logo=discord&logoColor=212121&style=for-the-badge"
-            height="30"
-            style="margin-left: 3px"
-        />
-    </a>
-    <a href="https://cardinalanticheat.github.io/addon-api/docs/" target="_blank">
-        <img
-            src="https://img.shields.io/badge/javadoc-reference-5272B4.svg?style=for-the-badge"
-            height="30"
-            style="margin-left: 3px"
-        />
-    </a>
-</div>
 <doc-anchor-target id="getting-started" class="break-words">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#getting-started">#</doc-anchor-trigger>
@@ -345,68 +316,6 @@ Until you receive your license key you can use the community edition to be able 
 </p>
 <p>To activate the license key you have to edit the <code v-pre>Config.yml</code> and change the last line to include your license key.
 Restart the server and you are ready to go.</p>
-<doc-anchor-target id="configuration">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#configuration">#</doc-anchor-trigger>
-        <span>Configuration</span>
-    </h2>
-</doc-anchor-target>
-<p>While Cardinal is mostly plug-and-play, there are a few things that need to be considered or done.
-Please read through the following steps and make changes if needed.</p>
-<doc-anchor-target id="run-on-java-9-module-system">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#run-on-java-9-module-system">#</doc-anchor-trigger>
-        <span>Run on Java 9+ Module System</span>
-    </h3>
-</doc-anchor-target>
-<p>Cardinal uses <a href="https://micartey.github.io/jCloak/">JCloak</a> a project which aims to secure the jar file by providing additional runtime and decompiliation features.
-Because JCloak uses reflection and Java 9+ introduced a new module system the following JVM flag is <strong>mandatory</strong> for Java 9 and above:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">$ java --add-opens=java.base/java.lang=ALL-UNNAMED -jar &lt;file&gt;</code></pre>
-</doc-codeblock></div>
-<p>It is overall questionable why Java 9+ introduced this module system in the first place as it breaks a lot of existing code.</p>
-<doc-anchor-target id="stay-on-a-fixed-version">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#stay-on-a-fixed-version">#</doc-anchor-trigger>
-        <span>Stay on a fixed version</span>
-    </h3>
-</doc-anchor-target>
-<p>Cardinal consists of a loader that always uses the latest release so that you don&#x27;t have to download newer versions.
-While each release is always tested and walks through several stages you might want to wait to verify that a new version is compatible and stable.
-To stay on a fixed version, you only have to set an environment variable before starting the server:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">export CARDINAL_HASH=&lt;hash&gt;</code></pre>
-</doc-codeblock></div>
-<p>The current hash can be shown by executing the <code v-pre>cac</code> command and save the last 8 characters.</p>
-<doc-anchor-target id="use-unreleased-versions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#use-unreleased-versions">#</doc-anchor-trigger>
-        <span>Use unreleased versions</span>
-    </h3>
-</doc-anchor-target>
-<p>While stable versions are more beneficial, you might want to test out newer features, detections or fixes before it has been rolled-out.
-You can do this by setting another environment variable:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">export CARDINAL_BRANCH=nightly # nightly, alpha, beta, stable (default)</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="allow-tcpdump">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#allow-tcpdump">#</doc-anchor-trigger>
-        <span>Allow tcpdump</span>
-    </h3>
-</doc-anchor-target>
-<p>Cardinal uses the <code v-pre>tcpdump</code> command to capture network packets at hardware layer.
-This may or may not create new possibilities for detecting cheaters.
-Currently, tcpdump is only being used to detect blink.
-This command is not available on non-root users by default.
-To allow its use, you have to execute the following command on your Linux server:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">$ sudo setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump</code></pre>
-</doc-codeblock></div>
-<p>In case tcpdump is not installed, you can install it by executing the following command:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">$ sudo apt-get install tcpdump</code></pre>
-</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -426,10 +335,10 @@ To allow its use, you have to execute the following command on your Linux server
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../getting-started/permissions/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../configuration/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Permissions</span>
+                                                <span class="block mt-1">Configuration</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -473,6 +382,6 @@ To allow its use, you have to execute the following command on your Linux server
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Getting Started", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Getting Started", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
