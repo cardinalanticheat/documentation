@@ -27,5 +27,5 @@ While stable versions are more beneficial, you might want to test out newer feat
 You can do this by setting another environment variable:
 
 ```shell
-export CARDINAL_BRANCH=nightly # nightly, alpha, beta, stable (default)
+export CARDINAL_BRANCH=nightly # nightly, stable (default)
 ```
