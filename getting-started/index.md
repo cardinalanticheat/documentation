@@ -9,12 +9,12 @@ order: 1
 # Getting Started
 
 Cardinal requires Java 8 or above to run. You can download the latest version of Java [here](https://adoptopenjdk.net/).
-For Java 9 and above take a look at the [Run on Java 9+ Module System](#run-on-java-9-module-system) section.
 If you want to use more advanced features that surpass the capabilities of spigot, you can take a look at the [tcpdump section](#allow-tcpdump).
 
 ## Choose an Edition
 
-There are currently two editions available. They are different in features and pricing. Please check out the [pricing](/pricing) page to check out all the available information on the different editions.
+There are currently two editions available. They are different in features and pricing. 
+Please check out the [pricing](/pricing) page to check out all the available information on the different editions.
 
 ### Download Community Edition
 
