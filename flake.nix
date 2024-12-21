@@ -1,5 +1,5 @@
 {
-  description = "bachelor-arbeit";
+  description = "documentation";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -18,14 +18,18 @@
         };
       in
       {
-        devShells.default = pkgs.mkShell {
+        devShells.default = pkgs.mkShell rec {
             buildInputs = with pkgs; [
                 nodejs_22
                 nodePackages.npm
                 prefetch-npm-deps
+                icu.dev
+                icu
             ];
 
             shellHook = ''
+            export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath buildInputs}
+
             npm install retypeapp
             ./node_modules/retypeapp/platforms/linux-x64/retype  start
             '';
