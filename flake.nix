@@ -31,7 +31,7 @@
             export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath buildInputs}
 
             npm install retypeapp
-            ./node_modules/retypeapp/platforms/linux-x64/retype  start
+            ./node_modules/retypeapp/platforms/linux-x64/retype start
             '';
         };
       }
