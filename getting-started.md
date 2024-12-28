@@ -15,6 +15,26 @@ This site serves as a general guide to get Cardinal up and running.
 3. [Permissions](configuration/permission.md)
 4. [Create Addons](how-to/addons)
 
+## Disable packet limit
+
+Cardinal sends a lot of transaction packets to confirm chunks, block placements, entity movements, etc.
+These packets can - especially on join - exceed the limit.
+Therefore, you **need** to disable the packet limiter.
+
+Do not worry, Cardinal has checks for that in-place.
+
+### Paper Servers
+
+1. Navigate to your server root
+2. Navigate into `config`
+3. Open `paper-global.yml`
+4. Set **all** `max-packet-rate` to `-1`
+
+## Other Servers
+
+The process for other servers is similar to that for paper servers.
+The file might just be located somewhere else and named differently.
+
 ## Running 1.20+ Server
 
 When you run version 1.20 or abov, you need to set the following property:
