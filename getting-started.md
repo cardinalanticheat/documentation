@@ -34,14 +34,3 @@ Do not worry, Cardinal has checks for that in-place.
 
 The process for other servers is similar to that for paper servers.
 The file might just be located somewhere else and named differently.
-
-## Running 1.20+ Server
-
-When you run version 1.20 or abov, you need to set the following property:
-
-```bash
--Dpaper.disablePluginRemapping=true
-```
-
-This will prevent paper from trying to do some unwanted bytecode manipulation.
-However, this **might break** some legacy plugins that rely on the remapping to work.
