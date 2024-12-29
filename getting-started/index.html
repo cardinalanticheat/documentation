@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788757017065">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788831930163">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -31,11 +31,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.6.0.788757017065" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.788831930163" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.788757017065" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.788831930163" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.788757017065" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.788831930163" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -285,8 +285,8 @@ Therefore, you <strong>need</strong> to disable the packet limiter.</p>
 </doc-anchor-target>
 <p>In case you are using ViaVersion, you need to disable the following two options:</p>
 <ul>
-<li><code v-pre>max-pps</code></li>
-<li><code v-pre>pps-tracking-period</code></li>
+<li><strong>max-pps</strong></li>
+<li><strong>pps-tracking-period</strong></li>
 </ul>
 <p>By setting both fields to <code v-pre>-1</code></p>
 <doc-anchor-target id="paper-servers">
@@ -297,9 +297,9 @@ Therefore, you <strong>need</strong> to disable the packet limiter.</p>
 </doc-anchor-target>
 <ol>
 <li>Navigate to your server root</li>
-<li>Navigate into <code v-pre>config</code></li>
-<li>Open <code v-pre>paper-global.yml</code></li>
-<li>Set <strong>all</strong> <code v-pre>max-packet-rate</code> to <code v-pre>-1</code></li>
+<li>Navigate into <strong>config</strong></li>
+<li>Open <strong>paper-global.yml</strong></li>
+<li>Set <strong>max-packet-rate</strong> to <code v-pre>-1</code> (2-times)</li>
 </ol>
 <doc-anchor-target id="other-servers">
     <h3>
