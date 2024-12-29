@@ -1,5 +1,5 @@
 ---
-icon: bookmark-fill
+icon: bookmark
 order: 2
 author:
     - name: micartey
@@ -27,17 +27,17 @@ Do not worry, Cardinal has checks for that in-place.
 
 In case you are using ViaVersion, you need to disable the following two options:
 
-- `max-pps`
-- `pps-tracking-period`
+- **max-pps**
+- **pps-tracking-period**
 
 By setting both fields to `-1`
 
 ### Paper Servers
 
 1. Navigate to your server root
-2. Navigate into `config`
-3. Open `paper-global.yml`
-4. Set **all** `max-packet-rate` to `-1`
+2. Navigate into **config**
+3. Open **paper-global.yml**
+4. Set **max-packet-rate** to `-1` (2-times)
 
 ### Other Servers
 
