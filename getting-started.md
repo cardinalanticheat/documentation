@@ -23,6 +23,15 @@ Therefore, you **need** to disable the packet limiter.
 
 Do not worry, Cardinal has checks for that in-place.
 
+### ViaVersion
+
+In case you are using ViaVersion, you need to disable the following two options:
+
+- `max-pps`
+- `pps-tracking-period`
+
+By setting both fields to `-1`
+
 ### Paper Servers
 
 1. Navigate to your server root
@@ -30,7 +39,7 @@ Do not worry, Cardinal has checks for that in-place.
 3. Open `paper-global.yml`
 4. Set **all** `max-packet-rate` to `-1`
 
-## Other Servers
+### Other Servers
 
 The process for other servers is similar to that for paper servers.
 The file might just be located somewhere else and named differently.
