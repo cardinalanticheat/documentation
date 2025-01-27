@@ -9,7 +9,7 @@ order: -2
 
 | Features          | :icon-dependabot: Community | :icon-verified: Pro |
 |-------------------|-----------------------------|---------------------|
-| Banning           | :icon-x:                    | :icon-check:        |
+| Kicking / Banning | :icon-x:                    | :icon-check:        |
 | Mitigating        | :icon-x:                    | :icon-check:        |
 | Bedrock Support   | :icon-x:                    | :icon-check:        |
 | Devices / Servers | N/A                         | 3                   |
