@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.811360630030">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.811368359762">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Versioning</title>
     <meta name="title" content="Versioning">
-    <meta name="description" content="Cardinal uses by default the latest nightly release">
+    <meta name="description" content="Cardinal uses by default the latest stable release">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://cardinalanticheat.github.io/documentation/checklist/versioning/">
@@ -21,22 +21,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cardinalanticheat.github.io/documentation/checklist/versioning/">
     <meta property="og:title" content="Versioning">
-    <meta property="og:description" content="Cardinal uses by default the latest nightly release">
+    <meta property="og:description" content="Cardinal uses by default the latest stable release">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://cardinalanticheat.github.io/documentation/checklist/versioning/">
     <meta property="twitter:title" content="Versioning">
-    <meta property="twitter:description" content="Cardinal uses by default the latest nightly release">
+    <meta property="twitter:description" content="Cardinal uses by default the latest stable release">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.11.0.811360630030" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.811368359762" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.811360630030" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.811368359762" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.811360630030" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.811360630030" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.811368359762" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.811368359762" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -262,7 +262,7 @@
 </div>
 
 <blockquote>
-<p>Cardinal uses by default the latest nightly release</p>
+<p>Cardinal uses by default the latest stable release</p>
 </blockquote>
 <doc-anchor-target id="stay-on-a-fixed-version">
     <h3>
@@ -271,7 +271,7 @@
     </h3>
 </doc-anchor-target>
 <p>Cardinal consists of a loader that always uses the latest release so that you don&#x27;t have to download newer versions.
-To stay on a fixed version, you only have to set an environment variable before starting the server:</p>
+To stay on a fixed version, you have to set an environment variable before starting the server:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-bash"><code v-pre class="language-bash">export CARDINAL_HASH=&lt;hash&gt;</code></pre>
 </doc-codeblock></div>
@@ -282,15 +282,15 @@ To stay on a fixed version, you only have to set an environment variable before 
         <span>Use unreleased versions</span>
     </h3>
 </doc-anchor-target>
-<p>While stable versions are more beneficial, you might want to test out newer features, detections or fixes before it has been rolled-out.
+<p>While stable versions are more beneficial, you might want to test out newer features, detections or fixes before they have been rolled-out.
 You can do this by setting another environment variable:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-bash"><code v-pre class="language-bash">export CARDINAL_BRANCH=stable # nightly (default), stable</code></pre>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">export CARDINAL_BRANCH=stable # nightly, stable (default) </code></pre>
 </doc-codeblock></div>
 <p>Alternatively, you can specify the branch using a jvm flag.
-Using an environment variable will have a higher priority.</p>
+The enviroment variable will have a higher priority though, so make sure to remove it beforehand.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-bash"><code v-pre class="language-bash">java -jar -DCardinalBranch=nightly -Xmx...</code></pre>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">-DCardinalBranch=nightly</code></pre>
 </doc-codeblock></div>
 
                                 
