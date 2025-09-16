@@ -38,7 +38,7 @@ icon: rocket
 
 ## Testserver
 
-![img](https://status.micartey.dev/api/badge/5/status?downColor=%23F75270&maintenanceColor=%23F75270&style=for-the-badge)
+![](https://status.micartey.dev/api/badge/5/status?downColor=%23F75270&maintenanceColor=%23F75270&style=for-the-badge)
 
 If you are interested, you are welcome to join the official public testserver and try it yourself!
 
