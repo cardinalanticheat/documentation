@@ -28,3 +28,10 @@ You can do this by setting another environment variable:
 ```shell
 export CARDINAL_BRANCH=stable # nightly (default), stable
 ```
+
+Alternatively, you can specify the branch using a jvm flag.
+Using an environment variable will have a higher priority.
+
+```shell
+java -jar -DCardinalBranch=nightly -Xmx...
+```

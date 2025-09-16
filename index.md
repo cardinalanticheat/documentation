@@ -38,6 +38,8 @@ icon: rocket
 
 ## Testserver
 
+![img](https://status.micartey.dev/api/badge/5/status?downColor=%23F75270&maintenanceColor=%23F75270&style=for-the-badge)
+
 If you are interested, you are welcome to join the official public testserver and try it yourself!
 
 ```
@@ -55,9 +57,12 @@ Apart from detecting cheaters, Cardinal Anticheat also offers a lot of other fea
 server owner.
 
 | Feature           | Description                                                                                                                                                                                                                                                                     |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bedrock Support   | As one of few, Cardinal supports Bedrock. This includes detecting cheats while other anticheats only exempt/whitelist bedrock players (Experimental)                                                                                                                            |
-| Addons            | Cardinal also allows loading, developing and sharing addons. There are already some addons on my [discord](https://discord.gg/fxTn7v8) server. Furthermore, there is a rather good documentation for developers on how to write your own addons [here](how-to/addons/)          |
+| Addons            | Cardinal has by far the most sophisticated addon system that allows loading, developing and sharing addons. There is a rather good documentation for developers on how to write your own addons [here](how-to/addons/)                                                          |
 | Reports           | Each flag will be stored as a so called "report". Players with a lot of reports are very probably cheating. Moderators can vew a sorted list of the players with the most reports and decide to ban those with an unusual high amount of reports                                |
 | Dialects          | As closed source projects have legitimate doubts about security and privacy, Cardinal doesn't handle any database connections. Reading and writing is only possible through [dialects](how-to/addons/dialects/) which are a form of addons and provide a high level of security |
 | Always-up to date | Cardinal uses a dynamic loading strategy that provides better support for versioning than other plugins, which also includes the loading of the newest release on startup. This provides better and easier hotfixes to everyone                                                 |
+
+Cardinal is more than just an anticheat and thus is not directly plug-n-play.
+It is meant to be a system you build your server around.
