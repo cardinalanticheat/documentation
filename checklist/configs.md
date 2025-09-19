@@ -1,5 +1,5 @@
 ---
-icon: icon-file-diff
+icon: file-diff
 author:
   name: micartey
   avatar: https://github.com/micartey.png
