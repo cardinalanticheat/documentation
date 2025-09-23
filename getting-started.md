@@ -10,11 +10,12 @@ author:
 
 This site serves as a general guide to get Cardinal up and running.
 
-1. [Download Cardinal](checklist/versioning.md)
-2. [Commands](checklist/commands.md)
-3. [Permissions](checklist/permission.md)
-4. [Bedrock Support](checklist/bedrock.md)
-5. [Create Addons](how-to/addons)
+1. [Download Cardinal](https://github.com/micartey/Cardinal-Anticheat/releases)
+2. [Versioning](checklist/versioning.md)
+3. [Commands](checklist/commands.md)
+4. [Permissions](checklist/permission.md)
+5. [Bedrock Support](checklist/bedrock.md)
+6. [Create Addons](how-to/addons)
 
 ## Disable packet limit
 
