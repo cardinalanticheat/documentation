@@ -1,5 +1,6 @@
 ---
 icon: command-palette
+order: -1
 author:
   name: micartey
   avatar: https://github.com/micartey.png

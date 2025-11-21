@@ -1,13 +1,13 @@
 ---
 icon: bug
-order: -999
+order: 0
 author:
     - name: micartey
       avatar: https://github.com/micartey.png
 ---
 
 > Bedrock support is experimental but stable
-> 
+>
 > That means that you can use it without worries, but decisions about banning **should not** be made automatically
 
 ## Setup
@@ -22,8 +22,8 @@ After starting your server once, it will generate the Geyser-Spigot config in yo
 Edit the config:
 
 ```yaml #5
-remote: 
-    
+remote:
+
     # Change the auth-type to "floodgate" like below
     # This value is by default "online"
     auth-type: floodgate
