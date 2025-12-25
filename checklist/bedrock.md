@@ -18,6 +18,7 @@ author:
 ### Configure Geyser to use Floodgate
 
 After starting your server once, it will generate the Geyser-Spigot config in your plugins directory.
+Please be aware that details may wary - make sure to compare this information with the official Flodgate documentation.
 
 Edit the config:
 

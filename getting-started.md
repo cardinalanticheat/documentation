@@ -40,8 +40,3 @@ By setting both fields to `-1`
 2. Navigate into **config**
 3. Open **paper-global.yml**
 4. Set **max-packet-rate** to `-1` (2-times)
-
-### Other Servers
-
-The process for other servers is similar to that for paper servers.
-The file might just be located somewhere else and named differently.

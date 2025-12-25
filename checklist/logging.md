@@ -17,4 +17,4 @@ If you want to disable logging, you can simply add the following JVM flag:
 However, in most cases you don't need to disable logging.
 Only exceptions are logged and they hardly occure.
 They mainly occure when the bukkit api changes things in releases and these changes haven't been reflected in the code base.
-Therefore, these exceptions are very important for the further development of Cardinal.
+Therefore, these exceptions are very important for the further development of Cardinal - but not common.
