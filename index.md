@@ -26,6 +26,8 @@ icon: rocket
     </a>
 </div>
 
+![](https://cdn.micartey.dev/api/v1/download/blob/Features.png){ style="width: 90%;" }
+
 # Welcome
 
 > Cardinal Anticheat is a Minecraft anticheat that uses several novel approches to make players have a hard time hacking
