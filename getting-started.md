@@ -41,8 +41,6 @@ Cardinal sends a lot of transaction packets to confirm chunks, block placements,
 These packets can - especially on join - exceed the limit.
 Therefore, you **need** to disable the packet limiter.
 
-Do not worry, Cardinal has checks for that in-place.
-
 ### ViaVersion
 
 In case you are using ViaVersion, you need to disable the following two options:
@@ -61,11 +59,9 @@ By setting both fields to `-1`
 
 ## Further Steps
 
-Please skim at least the following pages.
-They are not a must have for the anticheat to get working, but they will provide important information for deeper understanding and handling.
-
 - [Versioning](checklist/versioning.md)
 - [Commands](checklist/commands.md)
 - [Permissions](checklist/permission.md)
 - [Bedrock Support](checklist/bedrock.md)
 - [Create Addons](how-to/addons)
+- [FAQ](FAQ.md)

@@ -5,17 +5,14 @@ branding:
   logo: static/images/cardinal.png
   title: Cardinal Anticheat
 links:
-- text: GitHub
-  link: https://github.com/cardinalanticheat
-  icon: mark-github
-- text: Discord
-  link: https://discord.gg/fxTn7v8
-  icon: comment-discussion
-- text: Javadoc
-  link: https://cardinalanticheat.github.io/addon-api/docs/
-  icon: book
-- text: Contact
-  link: mailto:me@micartey.dev
-  icon: mail
+  - text: GitHub
+    link: https://github.com/cardinalanticheat
+    icon: mark-github
+  - text: Discord
+    link: https://discord.gg/fxTn7v8
+    icon: comment-discussion
+  - text: Javadoc
+    link: https://cardinalanticheat.github.io/addon-api/docs/
+    icon: book
 footer:
   copyright: "&copy; micartey {{ year }}. All rights reserved."
