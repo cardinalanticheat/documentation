@@ -41,6 +41,31 @@ Anticheat:
     block-initial-movement: true
 ```
 
+## Mvml configuration could not be loaded
+
+In that case error appears and you are ansure why, you should delete the config file(s).
+As Cardinal does use its own flavor of yaml, it is very keen of the format and spaces:
+
+- 2 spaces
+- No list support
+- Strings must be enclosed in quotation marks
+
+## Could not determine server version. Falling back to retrive bukkit version
+
+This message is not of any concern but more of a debug message.
+It will be visible for all newer versions than 1.8.
+
+As long as the listed version is correct, there is no need to report this.
+
+## tcpdump could not be found / accessed without root
+
+tcpdump is a command that allows you to inspect the network traffic at hardware level.
+It is an optional feature that only works for non-proxied servers (typically vanilla servers).
+
+This message states the the current context does not have the privileges to access the command.
+You should add linux capabilities to allow the current user to execute this command without sudo.
+To do that, ask an LLM such as ChatGPT for a step by step guide for your distrobution.
+
 ## Can I get a refund?
 
 Depending on the purchase method, it is not possible.
