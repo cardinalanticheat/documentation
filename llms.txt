@@ -1,0 +1,32 @@
+﻿# Welcome
+
+> Cardinal Anticheat is a Minecraft anticheat that uses several novel approches to make players have a hard time hacking on your server. Each check is unique and designed specifically for Cardinal Anticheat always trying to find methods and ways that haven't been tested before.
+
+- [Welcome](https://cardinalanticheat.github.io/documentation/index.md): Welcome
+- [Getting Started](https://cardinalanticheat.github.io/documentation/getting-started.md): PLEASE READ THIS PAGE IN ITS ENTIRETY
+- [Checklist](https://cardinalanticheat.github.io/documentation/checklist/index.md): Please make sure to go through all steps and make sure you changed the relevant config files and understood how cardinal works.
+- [From Zero to Hero](https://cardinalanticheat.github.io/documentation/how-to/index.md): From Zero to Hero is a series of resources that will help you to get started to develop with Cardinal. The series will cover the basics of the addon api and will also provide some examples.
+- [Troubleshooting](https://cardinalanticheat.github.io/documentation/troubleshooting.md): Please always first check the console for exceptions and errors. Many exceptions are self-explanatory and can be fixed by reading the error message or after a quick google.
+- [License Agreement](https://cardinalanticheat.github.io/documentation/license.md): This software and accompanying documentation (the "Software") is the property of micartey and is protected by copyright, trademark, patent, and/or other intellectual property laws.
+- [Pricing](https://cardinalanticheat.github.io/documentation/pricing.md): Features
+- [FAQ](https://cardinalanticheat.github.io/documentation/faq.md): A list of frequently asked questions. As these questions have been answered a number of times, they are documented here.
+
+## Checklist
+
+- [Bedrock](https://cardinalanticheat.github.io/documentation/checklist/bedrock.md): Bedrock support is experimental but stable
+- [Configs](https://cardinalanticheat.github.io/documentation/checklist/configs.md): There are a few default configs which are more of a quick setting for the anticheat. They mostly transform the state of checks, change punishment or disable kicks etc.
+- [Logging](https://cardinalanticheat.github.io/documentation/checklist/logging.md): Cardinal logs exceptions to /plugins/CAC/logs and creates a file for each day. In case you run into any kind of bug, please create an issue on github and append the log file.
+- [Versioning](https://cardinalanticheat.github.io/documentation/checklist/versioning.md): Cardinal uses by default the latest stable release
+- [Attributes](https://cardinalanticheat.github.io/documentation/checklist/attributes.md): Attributes are a rather new Minecraft feature and are only supported to a limited degree
+- [Commands](https://cardinalanticheat.github.io/documentation/checklist/commands.md): Command
+- [Permissions](https://cardinalanticheat.github.io/documentation/checklist/permission.md): Permission
+- [Detections](https://cardinalanticheat.github.io/documentation/checklist/detections.md): Every check has a Type A, Type B, ... suffix.
+
+## From Zero to Hero
+
+### Addons
+
+- [Addons](https://cardinalanticheat.github.io/documentation/how-to/addons/index.md): To get started, you need to add the extension api to your build file:
+- [Commands](https://cardinalanticheat.github.io/documentation/how-to/addons/commands.md): To handle commands you have to implement Command
+- [Dialects](https://cardinalanticheat.github.io/documentation/how-to/addons/dialects.md): Cardinal has a ready-to-use mysql dialact available.
+- [Events](https://cardinalanticheat.github.io/documentation/how-to/addons/events.md): As you already know, you have to implement Listener to use bukkit events. In case you also want to use the build-in events of Cardinal-Anticheat you have to implement EventListener.
