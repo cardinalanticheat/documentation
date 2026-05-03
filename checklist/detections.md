@@ -6,6 +6,7 @@ author:
     avatar: https://github.com/micartey.png
 ---
 
+<!--
 > Every check has a `Type A`, `Type B`, ... suffix.
 >
 > You can get a completet list with all suffix with `/cac check list`
@@ -16,12 +17,14 @@ author:
 > - _NoFall_
 > - _NoGround_
 > - _BedFucker_
+-->
 
 ## Combat
 
 | Prefix       | Description                                                                 |
 | ------------ | --------------------------------------------------------------------------- |
 | _KillAura_   | Some attack patterns that are normally only possible through KillAura usage |
+| _Heuristics_ | Some attack patterns that are abnoraml (statistically)                      |
 | _Reach_      | Hitting an enemy more than 3 blocks away                                    |
 | _NoSwing_    | Hitting without arm animation                                               |
 | _BlockHit_   | Hitting while blocking                                                      |
