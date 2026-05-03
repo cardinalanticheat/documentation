@@ -87,4 +87,5 @@ _(This step is optional)_
 - [Permissions](checklist/permission.md)
 - [Bedrock Support](checklist/bedrock.md)
 - [Create Addons](how-to/addons)
+- [Monitoring](checklist/monitoring.md)
 - [FAQ](FAQ.md)
