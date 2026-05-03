@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "retypeapp": "^3.12.0"
+    "retypeapp": "^4.5.3",
+    "retypeapp-linux-x64": "^4.5.3"
   }
 }

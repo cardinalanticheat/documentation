@@ -16,6 +16,7 @@
 - [Bedrock](https://cardinalanticheat.github.io/documentation/checklist/bedrock.md): Bedrock support is experimental but stable
 - [Configs](https://cardinalanticheat.github.io/documentation/checklist/configs.md): There are a few default configs which are more of a quick setting for the anticheat. They mostly transform the state of checks, change punishment or disable kicks etc.
 - [Logging](https://cardinalanticheat.github.io/documentation/checklist/logging.md): Cardinal logs exceptions to /plugins/CAC/logs and creates a file for each day. In case you run into any kind of bug, please create an issue on github and append the log file.
+- [Monitoring](https://cardinalanticheat.github.io/documentation/checklist/monitoring.md): Cardinal now supports pushing logs to loki. Here is a simple template you can use with docker to receive logs and flag information:
 - [Versioning](https://cardinalanticheat.github.io/documentation/checklist/versioning.md): Cardinal uses by default the latest stable release
 - [Attributes](https://cardinalanticheat.github.io/documentation/checklist/attributes.md): Attributes are supported to a limited degree
 - [Commands](https://cardinalanticheat.github.io/documentation/checklist/commands.md): Command
