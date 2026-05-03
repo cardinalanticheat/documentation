@@ -1,4 +1,4 @@
-> Attributes are a rather new Minecraft feature and are only supported to a limited degree
+> Attributes are supported to a limited degree
 > 
 > The following list contains all the supported attributes.
 > Other attributes can lead to unwated side-effects - mainly false positives
@@ -9,4 +9,4 @@
 |--------------------------|
 | movement_speed           | 
 | gravity                  | 
-| entity_interaction_range | 
+| entity_interaction_range |

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831075215438">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831082003145">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Detections</title>
     <meta name="title" content="Detections">
-    <meta name="description" content="Every check has a Type A, Type B, ... suffix.">
+    <meta name="description" content="Prefix">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://cardinalanticheat.github.io/documentation/checklist/detections/">
@@ -23,7 +23,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cardinalanticheat.github.io/documentation/checklist/detections/">
     <meta property="og:title" content="Detections">
-    <meta property="og:description" content="Every check has a Type A, Type B, ... suffix.">
+    <meta property="og:description" content="Prefix">
     <meta property="og:site_name" content="Cardinal Anticheat">
     <meta property="og:locale" content="en_US">
 
@@ -31,18 +31,18 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://cardinalanticheat.github.io/documentation/checklist/detections/">
     <meta name="twitter:title" content="Detections">
-    <meta name="twitter:description" content="Every check has a Type A, Type B, ... suffix.">
+    <meta name="twitter:description" content="Prefix">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://cardinalanticheat.github.io/documentation/checklist/detections.md">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.5.3.831075215438" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.5.3.831082003145" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831075215438" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831082003145" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831075215438" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831082003145" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -206,17 +206,18 @@
     </div>
 </div>
 
-<blockquote>
-<p>Every check has a <code translate="no" v-pre>Type A</code>, <code translate="no" v-pre>Type B</code>, ... suffix.</p>
-<p>You can get a completet list with all suffix with <code translate="no" v-pre>/cac check list</code></p>
-<p>Exceptions to that rule are:</p>
-<ul>
-<li><em>FastLadder</em></li>
-<li><em>NoFall</em></li>
-<li><em>NoGround</em></li>
-<li><em>BedFucker</em></li>
-</ul>
-</blockquote>
+<!--
+> Every check has a `Type A`, `Type B`, ... suffix.
+>
+> You can get a completet list with all suffix with `/cac check list`
+>
+> Exceptions to that rule are:
+>
+> - _FastLadder_
+> - _NoFall_
+> - _NoGround_
+> - _BedFucker_
+-->
 <h2 id="combat">Combat</h2>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -230,6 +231,10 @@
 <tr>
 <td><em>KillAura</em></td>
 <td>Some attack patterns that are normally only possible through KillAura usage</td>
+</tr>
+<tr>
+<td><em>Heuristics</em></td>
+<td>Some attack patterns that are abnoraml (statistically)</td>
 </tr>
 <tr>
 <td><em>Reach</em></td>

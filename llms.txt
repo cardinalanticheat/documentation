@@ -17,10 +17,10 @@
 - [Configs](https://cardinalanticheat.github.io/documentation/checklist/configs.md): There are a few default configs which are more of a quick setting for the anticheat. They mostly transform the state of checks, change punishment or disable kicks etc.
 - [Logging](https://cardinalanticheat.github.io/documentation/checklist/logging.md): Cardinal logs exceptions to /plugins/CAC/logs and creates a file for each day. In case you run into any kind of bug, please create an issue on github and append the log file.
 - [Versioning](https://cardinalanticheat.github.io/documentation/checklist/versioning.md): Cardinal uses by default the latest stable release
-- [Attributes](https://cardinalanticheat.github.io/documentation/checklist/attributes.md): Attributes are a rather new Minecraft feature and are only supported to a limited degree
+- [Attributes](https://cardinalanticheat.github.io/documentation/checklist/attributes.md): Attributes are supported to a limited degree
 - [Commands](https://cardinalanticheat.github.io/documentation/checklist/commands.md): Command
 - [Permissions](https://cardinalanticheat.github.io/documentation/checklist/permission.md): Permission
-- [Detections](https://cardinalanticheat.github.io/documentation/checklist/detections.md): Every check has a Type A, Type B, ... suffix.
+- [Detections](https://cardinalanticheat.github.io/documentation/checklist/detections.md): Prefix
 
 ## From Zero to Hero
 
