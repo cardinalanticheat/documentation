@@ -84,3 +84,9 @@ Before shutting any of these components down, they would be migrated and / or re
 
 At last, if the servers shutdown, you will receive further notice on how to run the plugin without any of this infrastructure.
 Such behavior has been planned for and is already supported.
+
+## Is a service down?
+
+Services are usually not down, at it also hasn't happen in the past aside from quick restarts.
+
+You can check the services through the [Status Page](https://status.micartey.dev/status/cardinal) before you create a complaint.

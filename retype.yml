@@ -8,6 +8,9 @@ links:
   - text: GitHub
     link: https://github.com/cardinalanticheat
     icon: mark-github
+  - text: Status Page
+    link: https://status.micartey.dev/status/cardinal
+    icon: globe
   - text: Discord
     link: https://discord.gg/fxTn7v8
     icon: comment-discussion
