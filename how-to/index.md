@@ -20,3 +20,4 @@ It is also possible to jump to a specific topic specified in the table of conten
 |---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [Testserver](https://github.com/cardinalanticheat/testserver-addon) | Adds features and wanted behaviours to the anticheat in order to run it on a testserver |
 | [MySQL-Dialect](https://github.com/cardinalanticheat/mysql-dialect) | Dialect to store bans and reports                                                       |
+| [Console-Log](https://github.com/cardinalanticheat/console-log-addon) | Log alerts to the console in a simple format |
