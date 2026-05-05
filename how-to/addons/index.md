@@ -1,11 +1,8 @@
 # Addons
 
-To get started, you need to add the extension api to your build file:
-
-1. Add the JitPack repository to your build file
-2. Add the dependency
-
+To get started, you need to add the extension api to your build file.
 Make sure to **NOT** export the source into your addon but use `compileOnly` for gradle and `provide` for maven.
+Exporting the source will result in an error or potentially a JVM crash!
 
 +++ Gradle
 

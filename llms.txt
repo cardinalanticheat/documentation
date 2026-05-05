@@ -27,7 +27,7 @@
 
 ### Addons
 
-- [Addons](https://cardinalanticheat.github.io/documentation/how-to/addons/index.md): To get started, you need to add the extension api to your build file:
+- [Addons](https://cardinalanticheat.github.io/documentation/how-to/addons/index.md): To get started, you need to add the extension api to your build file. Make sure to NOT export the source into your addon but use compileOnly for gradle and provide for maven.
 - [Commands](https://cardinalanticheat.github.io/documentation/how-to/addons/commands.md): To handle commands you have to implement Command
 - [Dialects](https://cardinalanticheat.github.io/documentation/how-to/addons/dialects.md): Cardinal has a ready-to-use mysql dialact available.
 - [Events](https://cardinalanticheat.github.io/documentation/how-to/addons/events.md): As you already know, you have to implement Listener to use bukkit events. In case you also want to use the build-in events of Cardinal-Anticheat you have to implement EventListener.
