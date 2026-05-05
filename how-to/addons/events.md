@@ -11,7 +11,7 @@ tags:
 # Events
 
 As you already know, you have to implement `Listener` to use bukkit events. 
-In case you also want to use the [build-in events](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/events/event/Event.html) of Cardinal-Anticheat you have to implement `EventListener`. 
+In case you also want to use the [build-in events](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/cardinal/events/event/Event.html) of Cardinal-Anticheat you have to implement `EventListener`. 
 That's because Cardinal-Anticheat has an entirely different event-system. 
 It's possible to use bukkit events and cardinal events in the same class by implementing both classes.
 

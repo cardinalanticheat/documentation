@@ -10,7 +10,7 @@ tags:
 
 # Commands
 
-To handle commands you have to implement [Command](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/command/Command.html)
+To handle commands you have to implement [Command](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/cardinal/extension/impl/command/Command.html)
 
 ```java
 public interface Command {
