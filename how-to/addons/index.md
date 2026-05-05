@@ -14,20 +14,27 @@ repositories {
     mavenCentral()
     
     ivy {
-        url = 'https://raw.githubusercontent.com/cardinalanticheat/addon-api/refs/heads/master/'
+        url = 'https://raw.githubusercontent.com/cardinalanticheat/addon-api/e52c2ef713232a33e7faeb053bd449e414406cfa/'
         patternLayout {
             artifact '[artifact].[ext]'
         }
-        metadataSources { 
-            artifact() 
+        metadataSources {
+            artifact()
         }
     }
 }
 
 dependencies {
-    compileOnly name: 'addon-api', ext: 'jar'
+    compileOnly name: 'addon-api', ext: 'jar', changing: true
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
 ```
+
+When you want to use a newer version, you need to update the hash in the ivy repository url.
+You need to use the fully qualified name of the commit in question.
 
 +++ Maven
 
