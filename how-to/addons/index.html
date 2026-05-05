@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831204760594">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831312497673">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -38,12 +38,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.5.3.831204760594" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.5.3.831312497673" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831204760594" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831312497673" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831204760594" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.831204760594" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831312497673" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.831312497673" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -230,37 +230,52 @@
 </ol>
 <p>Make sure to <strong>NOT</strong> export the source into your addon but use <code translate="no" v-pre>compileOnly</code> for gradle and <code translate="no" v-pre>provide</code> for maven.</p>
 <doc-tabs>
-<doc-tab v-cloak id="maven">
-<template #title>Maven</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;repositories&gt;
-  &lt;repository&gt;
-      &lt;id&gt;jitpack.io&lt;/id&gt;
-      &lt;url&gt;https://jitpack.io&lt;/url&gt;
-  &lt;/repository&gt;
-&lt;/repositories&gt;</code></pre>
-</doc-codeblock></div>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;dependency&gt;
-    &lt;groupId&gt;com.github.cardinalanticheat&lt;/groupId&gt;
-    &lt;artifactId&gt;addon-api&lt;/artifactId&gt;
-    &lt;version&gt;master-SNAPSHOT&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
-</doc-codeblock></div>
-</doc-tab>
 <doc-tab v-cloak id="gradle">
 <template #title>Gradle</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">allprojects {
-    repositories {
-        maven { url 'https://jitpack.io' }
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">repositories {
+    mavenCentral()
+    
+    ivy {
+        url = 'https://raw.githubusercontent.com/cardinalanticheat/addon-api/refs/heads/master/'
+        patternLayout {
+            artifact '[artifact].[ext]'
+        }
+        metadataSources { 
+            artifact() 
+        }
     }
+}
+
+dependencies {
+    compileOnly name: 'addon-api', ext: 'jar'
 }</code></pre>
 </doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="maven">
+<template #title>Maven</template>
+<p>The simplest method for maven is to install the addon api locally by running the following snippet:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">dependencies {
-    compileOnly 'com.github.cardinalanticheat:addon-api:master-SNAPSHOT'
-}</code></pre>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">wget https://raw.githubusercontent.com/cardinalanticheat/addon-api/refs/heads/master/addon-api.jar
+
+mvn install:install-file \
+   -Dfile=addon-api.jar \
+   -DgroupId=cardinalanticheat \
+   -DartifactId=addon-api \
+   -Dversion=1.0 \
+   -Dpackaging=jar</code></pre>
+</doc-codeblock></div>
+<p>And then add the required dependency.
+You can do that <strong>only</strong> after you have completed the first step.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;cardinalanticheat&lt;/groupId&gt;
+        &lt;artifactId&gt;addon-api&lt;/artifactId&gt;
+        &lt;version&gt;1.0&lt;/version&gt;
+        &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
@@ -291,6 +306,8 @@ public class Core implements Addon {
   &quot;version&quot;: &quot;v1.0&quot;
 }</code></pre>
 </doc-codeblock></div>
+<p>When an addon does not load, make sure that this file is present in the actual jar at root level.
+This process is equal to the <code translate="no" v-pre>plugin.yml</code> that you need for bukkit plugins!</p>
 
                 <div id="retype-tags" class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mt-6 mb-6 clear-both">
                     <span>

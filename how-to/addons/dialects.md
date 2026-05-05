@@ -13,7 +13,7 @@ A dialect is used to abstract the database handling by loading the dialect in fo
 
 ## Implement a dialect
 
-You simply have to create a class and implement [PunishDialect](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/dialects/PunishDialect.html) for bans and [VialationDialect](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/dialects/ViolationDialect.html) for reports. Both interfaces will require you to implement some methods but the implementation is up to you. You can use any database or file system to write and retrieve the information.
+You simply have to create a class and implement [PunishDialect](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/cardinal/extension/impl/dialects/PunishDialect.html) for bans and [VialationDialect](https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/cardinal/extension/impl/dialects/ViolationDialect.html) for reports. Both interfaces will require you to implement some methods but the implementation is up to you. You can use any database or file system to write and retrieve the information.
 
 ## Register the interfaces
 

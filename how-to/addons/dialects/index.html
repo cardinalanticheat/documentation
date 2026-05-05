@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/documentation">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831204760594">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831312497673">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -38,12 +38,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.5.3.831204760594" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.5.3.831312497673" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831204760594" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831312497673" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831204760594" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.5.3.831204760594" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831312497673" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.5.3.831312497673" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -233,7 +233,7 @@ The reason is fairly easy to understand. Cardinal Anticheat is a close source pl
 However, Cardinal Anticheat still has a build in ban system and other features, such as storing flags as so-called reports.</p>
 <p>A dialect is used to abstract the database handling by loading the dialect in form of an addon. Creating your own dialect secures the data usage and guarantees the protection of sensitive data, since Cardinal has neither access to the connection nor to any credentials which are typically required. In addition, this gives you the opportunity to migrate to any form of database you desire.</p>
 <h2 id="implement-a-dialect">Implement a dialect</h2>
-<p>You simply have to create a class and implement <a href="https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/dialects/PunishDialect.html">PunishDialect</a> for bans and <a href="https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/extension/impl/dialects/ViolationDialect.html">VialationDialect</a> for reports. Both interfaces will require you to implement some methods but the implementation is up to you. You can use any database or file system to write and retrieve the information.</p>
+<p>You simply have to create a class and implement <a href="https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/cardinal/extension/impl/dialects/PunishDialect.html">PunishDialect</a> for bans and <a href="https://cardinalanticheat.github.io/addon-api/docs/me/clientastisch/cardinal/extension/impl/dialects/ViolationDialect.html">VialationDialect</a> for reports. Both interfaces will require you to implement some methods but the implementation is up to you. You can use any database or file system to write and retrieve the information.</p>
 <h2 id="register-the-interfaces">Register the interfaces</h2>
 <p>Registering a dialect is similar to any other event or command you&#x27;re trying to register. Therefore, you need to get the static reference of Extension and call the method registerDialect with the required arguments.</p>
 <div id="register-the-interfaces-code-1" class="codeblock-wrapper"><doc-codeblock>

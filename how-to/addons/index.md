@@ -7,39 +7,55 @@ To get started, you need to add the extension api to your build file:
 
 Make sure to **NOT** export the source into your addon but use `compileOnly` for gradle and `provide` for maven.
 
-+++ Maven
-
-```xml
-<repositories>
-  <repository>
-      <id>jitpack.io</id>
-      <url>https://jitpack.io</url>
-  </repository>
-</repositories>
-```
-
-```xml
-<dependency>
-    <groupId>com.github.cardinalanticheat</groupId>
-    <artifactId>addon-api</artifactId>
-    <version>master-SNAPSHOT</version>
-</dependency>
-```
-
 +++ Gradle
 
 ```js
-allprojects {
-    repositories {
-        maven { url 'https://jitpack.io' }
+repositories {
+    mavenCentral()
+    
+    ivy {
+        url = 'https://raw.githubusercontent.com/cardinalanticheat/addon-api/refs/heads/master/'
+        patternLayout {
+            artifact '[artifact].[ext]'
+        }
+        metadataSources { 
+            artifact() 
+        }
     }
+}
+
+dependencies {
+    compileOnly name: 'addon-api', ext: 'jar'
 }
 ```
 
-```js
-dependencies {
-    compileOnly 'com.github.cardinalanticheat:addon-api:master-SNAPSHOT'
-}
++++ Maven
+
+The simplest method for maven is to install the addon api locally by running the following snippet:
+
+```bash
+wget https://raw.githubusercontent.com/cardinalanticheat/addon-api/refs/heads/master/addon-api.jar
+
+mvn install:install-file \
+   -Dfile=addon-api.jar \
+   -DgroupId=cardinalanticheat \
+   -DartifactId=addon-api \
+   -Dversion=1.0 \
+   -Dpackaging=jar
+```
+
+And then add the required dependency.
+You can do that **only** after you have completed the first step.
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>cardinalanticheat</groupId>
+        <artifactId>addon-api</artifactId>
+        <version>1.0</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
 ```
 
 +++
@@ -74,3 +90,6 @@ Unlike spigot, a file called `addon.json` must be created like following:
   "version": "v1.0"
 }
 ```
+
+When an addon does not load, make sure that this file is present in the actual jar at root level.
+This process is equal to the `plugin.yml` that you need for bukkit plugins!
